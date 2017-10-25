@@ -1,0 +1,6 @@
+/.coverage
+/dist/
+/build/
+/MANIFEST
+/wagtailapi_legacy_v1.egg-info/
+/venv
