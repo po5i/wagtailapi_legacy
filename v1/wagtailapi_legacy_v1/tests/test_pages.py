@@ -8,7 +8,7 @@ from django.core.urlresolvers import reverse
 from django.test import TestCase
 from django.test.utils import override_settings
 
-from wagtail.contrib.wagtailapi import signal_handlers
+from wagtailapi_legacy_v1 import signal_handlers
 from wagtail.tests.demosite import models
 from wagtail.tests.testapp.models import StreamPage
 from wagtail.wagtailcore.models import Page
