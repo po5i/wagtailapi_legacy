@@ -3,7 +3,7 @@ from __future__ import absolute_import, unicode_literals
 from django.conf import settings
 from django.utils.six.moves.urllib.parse import urlparse
 
-from wagtail.wagtailcore.models import Page
+from wagtail.core.models import Page
 
 
 class BadRequestError(Exception):

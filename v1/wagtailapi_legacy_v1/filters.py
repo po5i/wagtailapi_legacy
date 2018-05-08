@@ -4,8 +4,8 @@ from django.conf import settings
 from rest_framework.filters import BaseFilterBackend
 from taggit.managers import _TaggableManager
 
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailsearch.backends import get_search_backend
+from wagtail.core.models import Page
+from wagtail.search.backends import get_search_backend
 
 from .utils import BadRequestError, pages_for_site
 

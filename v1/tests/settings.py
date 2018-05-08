@@ -53,8 +53,8 @@ MIDDLEWARE = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'wagtail.wagtailcore.middleware.SiteMiddleware',
-    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+    'wagtail.core.middleware.SiteMiddleware',
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 )
 
 INSTALLED_APPS = (
@@ -63,21 +63,21 @@ INSTALLED_APPS = (
     # Install wagtailredirects with its appconfig
     # Theres nothing special about wagtailredirects, we just need to have one
     # app which uses AppConfigs to test that hooks load properly
-    'wagtail.wagtailredirects.apps.WagtailRedirectsAppConfig',
+    'wagtail.contrib.redirects.apps.WagtailRedirectsAppConfig',
 
     'wagtail.tests.testapp',
     'wagtail.tests.demosite',
     'wagtail.tests.customuser',
-    'wagtail.wagtailforms',
-    'wagtail.wagtailsearch',
-    'wagtail.wagtailembeds',
-    'wagtail.wagtailimages',
-    'wagtail.wagtailsites',
-    'wagtail.wagtailusers',
-    'wagtail.wagtailsnippets',
-    'wagtail.wagtaildocs',
-    'wagtail.wagtailadmin',
-    'wagtail.wagtailcore',
+    'wagtail.contrib.forms',
+    'wagtail.search',
+    'wagtail.embeds',
+    'wagtail.images',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.admin',
+    'wagtail.core',
 
     'taggit',
     'rest_framework',
@@ -109,7 +109,7 @@ PASSWORD_HASHERS = (
 
 WAGTAILSEARCH_BACKENDS = {
     'default': {
-        'BACKEND': 'wagtail.wagtailsearch.backends.db',
+        'BACKEND': 'wagtail.search.backends.db',
     }
 }
 
@@ -125,7 +125,7 @@ WAGTAIL_USER_CUSTOM_FIELDS = ['country', 'attachment']
 
 WAGTAILADMIN_RICH_TEXT_EDITORS = {
     'default': {
-        'WIDGET': 'wagtail.wagtailadmin.rich_text.HalloRichTextArea'
+        'WIDGET': 'wagtail.admin.rich_text.HalloRichTextArea'
     },
     'custom': {
         'WIDGET': 'wagtail.tests.testapp.rich_text.CustomRichTextArea'

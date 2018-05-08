@@ -3,12 +3,12 @@ from __future__ import absolute_import, unicode_literals
 import json
 
 import mock
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.test import TestCase
 from django.test.utils import override_settings
 
 from wagtailapi_legacy_v1 import signal_handlers
-from wagtail.wagtaildocs.models import get_document_model
+from wagtail.documents.models import get_document_model
 
 
 class TestDocumentListing(TestCase):

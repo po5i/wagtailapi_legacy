@@ -3,12 +3,12 @@ from __future__ import absolute_import, unicode_literals
 import json
 
 import mock
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.test import TestCase
 from django.test.utils import override_settings
 
 from wagtailapi_legacy_v1 import signal_handlers
-from wagtail.wagtailimages import get_image_model
+from wagtail.images import get_image_model
 
 
 class TestImageListing(TestCase):

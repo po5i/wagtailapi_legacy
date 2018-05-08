@@ -4,7 +4,7 @@ import warnings
 from collections import OrderedDict
 
 from django.conf.urls import url
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.http import Http404
 from rest_framework import status
 from rest_framework.renderers import BrowsableAPIRenderer, JSONRenderer
@@ -12,10 +12,10 @@ from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
 from wagtail.api import APIField
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailcore.utils import resolve_model_string
-from wagtail.wagtaildocs.models import get_document_model
-from wagtail.wagtailimages import get_image_model
+from wagtail.core.models import Page
+from wagtail.core.utils import resolve_model_string
+from wagtail.documents.models import get_document_model
+from wagtail.images import get_image_model
 
 from .filters import ChildOfFilter, DescendantOfFilter, FieldsFilter, OrderingFilter, SearchFilter
 from .pagination import WagtailPagination
