@@ -38,5 +38,12 @@ setup(
     install_requires=[
         'six>=1.10.0',
     ],
+    extras_require={
+        'testing': [
+            'Django==2.0.5',
+            'wagtail==2.0.1',
+            'mock>=1,<2',
+        ],
+    },
     zip_safe=False,
 )
