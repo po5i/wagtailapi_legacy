@@ -7,7 +7,7 @@ from django.urls import reverse
 from django.test import TestCase
 from django.test.utils import override_settings
 
-from wagtailapi_legacy_v1 import signal_handlers
+from wagtailapi_legacy.v1 import signal_handlers
 from wagtail.documents.models import get_document_model
 
 
@@ -362,13 +362,13 @@ class TestDocumentDetail(TestCase):
 @override_settings(
     WAGTAILFRONTENDCACHE={
         'varnish': {
-            'BACKEND': 'wagtail.contrib.wagtailfrontendcache.backends.HTTPBackend',
+            'BACKEND': 'wagtail.contrib.frontend_cache.backends.HTTPBackend',
             'LOCATION': 'http://localhost:8000',
         },
     },
     WAGTAILAPI_BASE_URL='http://api.example.com',
 )
-@mock.patch('wagtail.contrib.wagtailfrontendcache.backends.HTTPBackend.purge')
+@mock.patch('wagtail.contrib.frontend_cache.backends.HTTPBackend.purge')
 class TestDocumentCacheInvalidation(TestCase):
     fixtures = ['demosite.json']
 
