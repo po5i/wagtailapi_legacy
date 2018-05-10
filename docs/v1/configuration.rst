@@ -8,7 +8,7 @@ Settings
 
 This is used in two places, when generating absolute URLs to document files and invalidating the cache.
 
-Generating URLs to documents will fall back the the current request's hostname if this is not set. Cache invalidation cannot do this, however, so this setting must be set when using this module alongside the ``wagtailfrontendcache`` module.
+Generating URLs to documents will fall back the the current request's hostname if this is not set. Cache invalidation cannot do this, however, so this setting must be set when using this module alongside the ``wagtail.contrib.frontend_cache`` module.
 
 
 ``WAGTAILAPI_SEARCH_ENABLED`` (default: True)
@@ -59,9 +59,9 @@ This list also supports child relations (which will be nested inside the returne
 Frontend cache invalidation
 ---------------------------
 
-If you have a Varnish, Squid, Cloudflare or CloudFront instance in front of your API, the ``wagtailapi`` module can automatically invalidate cached responses for you whenever they are updated in the database.
+If you have a Varnish, Squid, Cloudflare or CloudFront instance in front of your API, this module can automatically invalidate cached responses for you whenever they are updated in the database.
 
-To enable it, firstly configure the ``wagtail.contrib.wagtailfrontendcache`` module within your project (see [Wagtail frontend cache docs](http://docs.wagtail.io/en/latest/contrib_components/frontendcache.html) for more information).
+To enable it, firstly configure the ``wagtail.contrib.frontend_cache`` module within your project (see [Wagtail frontend cache docs](http://docs.wagtail.io/en/latest/contrib_components/frontendcache.html) for more information).
 
 Then make sure that the ``WAGTAILAPI_BASE_URL`` setting is set correctly (Example: ``WAGTAILAPI_BASE_URL = 'http://api.mysite.com'``).
 
