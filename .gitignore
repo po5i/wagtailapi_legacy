@@ -1,10 +1,7 @@
-*.swp
 *.pyc
-.DS_Store
-/docs/_build/
-*.idea/
-/*.egg/
-.idea/
-*.iml
-*.ipr
-*.iws
+/.coverage
+/dist/
+/build/
+/MANIFEST
+/wagtailapi_legacy.egg-info/
+/venv

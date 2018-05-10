@@ -58,7 +58,7 @@ MIDDLEWARE = (
 )
 
 INSTALLED_APPS = (
-    'wagtailapi_legacy_v1',
+    'wagtailapi_legacy',
 
     # Install wagtailredirects with its appconfig
     # Theres nothing special about wagtailredirects, we just need to have one

@@ -4,11 +4,11 @@ import sys
 
 from setuptools import setup, find_packages
 
-from wagtailapi_legacy_v1 import __version__
+from wagtailapi_legacy import __version__
 
 
 setup(
-    name='wagtailapi_legacy_v1',
+    name='wagtailapi_legacy',
     version=__version__,
     description='',
     author='Karl Hobley',
