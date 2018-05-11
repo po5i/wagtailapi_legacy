@@ -7,7 +7,7 @@ from django.core.exceptions import ImproperlyConfigured
 
 class WagtailAPIAppConfig(AppConfig):
     name = 'wagtailapi_legacy.v1'
-    label = 'wagtailapi_legacy.v1'
+    label = 'wagtailapi_legacy_v1'
     verbose_name = "Wagtail API"
 
     def ready(self):
